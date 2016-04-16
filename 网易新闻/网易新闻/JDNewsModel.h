@@ -27,6 +27,12 @@
  */
 @property (nonatomic, copy) NSString *replyCount;
 
+//多图cell
+@property (nonatomic, strong) NSArray *imgextra;
+
+//大图
+@property (nonatomic, assign) BOOL imgType;
+
 
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 

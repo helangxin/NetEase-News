@@ -44,14 +44,14 @@
         [HeadLineArr enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL * _Nonnull stop) {
             [ Arr addObject:[JDNewsModel newsWithDict:dict]];
         }];
-        NSLog(@"%@",HeadLineArr);
+        //NSLog(@"%@",HeadLineArr);
 
         //传值
         finish(Arr.copy);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
      {
-         NSLog(@"error====%@",error);
+        // NSLog(@"error====%@",error);
          if (failed)
          {
              failed(error);

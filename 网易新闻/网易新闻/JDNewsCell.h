@@ -20,7 +20,15 @@
 
 //跟帖数
 @property (nonatomic, weak) IBOutlet UILabel *replyCountView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *imageBtn;
 
 
 @property (nonatomic, strong) JDNewsModel *newsModel;
+
+//根据模型标识返回不同类型的cell
++(NSString*)identifiy:(JDNewsModel*)news;
+
+//设置行高
++(CGFloat)cellHeight:(JDNewsModel*)news;
+
 @end

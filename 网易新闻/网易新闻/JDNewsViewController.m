@@ -40,8 +40,16 @@
 {
     //获取模型
     JDNewsModel*news=self.news[indexPath.row];
-    JDNewsCell*cell=[tableView dequeueReusableCellWithIdentifier:@"hehe"];
+    //根据标识符返回不同的cell
+    JDNewsCell*cell=[tableView dequeueReusableCellWithIdentifier:[JDNewsCell identifiy:news]];
     cell.newsModel=news;
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //获取模型
+    JDNewsModel*news=self.news[indexPath.row];
+    return [JDNewsCell cellHeight:news];
 }
 @end
