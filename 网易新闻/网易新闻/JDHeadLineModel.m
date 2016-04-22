@@ -36,7 +36,7 @@
     [[JDNewsTool shareManager]GET:@"headline/0-4.html" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
        
         
-         NSLog(@"%@--",responseObject);
+        // NSLog(@"%@--",responseObject);
         //获得字典的第一个Key
         NSString *rootKey=responseObject.keyEnumerator.nextObject;
         //获取数组

@@ -17,6 +17,10 @@
  *  频道id
  */
 @property (nonatomic, copy) NSString *tid;
+
+//加载不同的新闻
+@property (nonatomic, copy) NSString *URLstring;
+
 //返回所有的channel数组
 +(NSArray*)channel;
 

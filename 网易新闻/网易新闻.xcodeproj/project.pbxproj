@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BAF432B610306EDA4017586B /* libPods-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A48D61C71680CD7A676BDA2 /* libPods-网易新闻.a */; };
+		FF457C881CC66FF9001CD089 /* JDDetailNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF457C871CC66FF9001CD089 /* JDDetailNewsController.m */; };
+		FF457C8A1CC67593001CD089 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = FF457C891CC67593001CD089 /* detail.html */; };
 		FF81DE7B1CBD206D005E96EA /* JDHeadLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF81DE7A1CBD206D005E96EA /* JDHeadLineModel.m */; };
 		FF81DE7E1CBD216C005E96EA /* JDNewsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FF81DE7D1CBD216C005E96EA /* JDNewsTool.m */; };
 		FF82EB321CC1DC3500189320 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = FF82EB311CC1DC3500189320 /* NSObject+Log.m */; };
@@ -29,6 +31,7 @@
 		FFFFEB991CC224A0000F366A /* JDHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFEB981CC224A0000F366A /* JDHomeViewCell.m */; };
 		FFFFEB9C1CC22600000F366A /* JDChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFEB9B1CC22600000F366A /* JDChannelModel.m */; };
 		FFFFEB9E1CC22832000F366A /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = FFFFEB9D1CC22832000F366A /* topic_news.json */; };
+		FFFFEBA11CC236EF000F366A /* JDChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFFEBA01CC236EF000F366A /* JDChannelLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		8A48D61C71680CD7A676BDA2 /* libPods-网易新闻.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F714C53F5171AE3ED046AA79 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 		FF368C721CBD32BD003F480C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FF457C861CC66FF9001CD089 /* JDDetailNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDDetailNewsController.h; sourceTree = "<group>"; };
+		FF457C871CC66FF9001CD089 /* JDDetailNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDDetailNewsController.m; sourceTree = "<group>"; };
+		FF457C891CC67593001CD089 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
 		FF81DE791CBD206D005E96EA /* JDHeadLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDHeadLineModel.h; sourceTree = "<group>"; };
 		FF81DE7A1CBD206D005E96EA /* JDHeadLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDHeadLineModel.m; sourceTree = "<group>"; };
 		FF81DE7C1CBD216C005E96EA /* JDNewsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNewsTool.h; sourceTree = "<group>"; usesTabs = 0; };
@@ -73,6 +79,8 @@
 		FFFFEB9A1CC22600000F366A /* JDChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDChannelModel.h; sourceTree = "<group>"; };
 		FFFFEB9B1CC22600000F366A /* JDChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDChannelModel.m; sourceTree = "<group>"; };
 		FFFFEB9D1CC22832000F366A /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		FFFFEB9F1CC236EF000F366A /* JDChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDChannelLabel.h; sourceTree = "<group>"; };
+		FFFFEBA01CC236EF000F366A /* JDChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDChannelLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,7 @@
 		FFC21C5E1CBB93B000C6026E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF457C891CC67593001CD089 /* detail.html */,
 				FFFFEB9D1CC22832000F366A /* topic_news.json */,
 				FFC21C5F1CBB93B000C6026E /* main.m */,
 			);
@@ -202,6 +211,8 @@
 				FFF070DF1CC08F28008B836F /* news.storyboard */,
 				FFF070E11CC09047008B836F /* JDNewsViewController.h */,
 				FFF070E21CC09047008B836F /* JDNewsViewController.m */,
+				FF457C861CC66FF9001CD089 /* JDDetailNewsController.h */,
+				FF457C871CC66FF9001CD089 /* JDDetailNewsController.m */,
 				FFF070E41CC0BE40008B836F /* JDNewsCell.h */,
 				FFF070E51CC0BE40008B836F /* JDNewsCell.m */,
 			);
@@ -213,6 +224,8 @@
 			children = (
 				FFFFEB9A1CC22600000F366A /* JDChannelModel.h */,
 				FFFFEB9B1CC22600000F366A /* JDChannelModel.m */,
+				FFFFEB9F1CC236EF000F366A /* JDChannelLabel.h */,
+				FFFFEBA01CC236EF000F366A /* JDChannelLabel.m */,
 				FFFFEB921CC21B09000F366A /* JDHomeController.h */,
 				FFFFEB931CC21B09000F366A /* JDHomeController.m */,
 				FFFFEB971CC224A0000F366A /* JDHomeViewCell.h */,
@@ -290,6 +303,7 @@
 				FFC21C6B1CBB93B000C6026E /* Assets.xcassets in Resources */,
 				FFC21C691CBB93B000C6026E /* Main.storyboard in Resources */,
 				FFF070E01CC08F28008B836F /* news.storyboard in Resources */,
+				FF457C8A1CC67593001CD089 /* detail.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +364,9 @@
 			files = (
 				FFF070DE1CC08F15008B836F /* JDNewsModel.m in Sources */,
 				FFF0700A1CBEADAE008B836F /* JDLoopViewFLowLayout.m in Sources */,
+				FFFFEBA11CC236EF000F366A /* JDChannelLabel.m in Sources */,
 				FF82EB321CC1DC3500189320 /* NSObject+Log.m in Sources */,
+				FF457C881CC66FF9001CD089 /* JDDetailNewsController.m in Sources */,
 				FFF070E61CC0BE40008B836F /* JDNewsCell.m in Sources */,
 				FFC21C661CBB93B000C6026E /* JDHeadLineController.m in Sources */,
 				FFF070E31CC09047008B836F /* JDNewsViewController.m in Sources */,

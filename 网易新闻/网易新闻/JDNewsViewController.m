@@ -10,6 +10,7 @@
 #import "JDNewsViewController.h"
 #import "JDNewsModel.h"
 #import "JDNewsCell.h"
+#import "JDDetailNewsController.h"
 
 @interface JDNewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,15 +23,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [JDNewsModel NewsSuccess:^(NSArray *news)
-     {
-         self.news=news;
-         [self.tableView reloadData];
-     } andFailed:^(NSError *error) {
-        
-    }];
-}
+   }
 
+
+-(void)setURLString:(NSString *)URLString
+{
+    _URLString=URLString.copy;
+    
+    //打印加载不同的新闻模型cell的重用
+    NSLog(@"%@", URLString);
+    
+    [JDNewsModel loadData:URLString NewsSuccess:^(NSArray *news) {
+    self.news=news;
+    [self.tableView reloadData];
+} andFailed:^(NSError *error)
+    {
+    
+}];
+//    [JDNewsModel NewsSuccess:^(NSArray *news)
+//     {
+//     
+//     } andFailed:^(NSError *error)
+//    {
+//         
+//     }];
+
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.news.count;
@@ -51,5 +69,11 @@
     //获取模型
     JDNewsModel*news=self.news[indexPath.row];
     return [JDNewsCell cellHeight:news];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController *desVC=[[JDDetailNewsController alloc]init];
+    [self.navigationController pushViewController:desVC animated:YES];
 }
 @end

@@ -19,6 +19,13 @@
     return obj;
 }
 
+#pragma mark ---重写set
+-(void)setTid:(NSString *)tid
+{
+    _tid=[tid copy];
+    
+    self.URLstring=[NSString stringWithFormat:@"/nc/article/headline/%@/0-20.html",tid];
+}
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key {}
 +(NSArray*)channel
 {
@@ -35,13 +42,15 @@
     
     [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        [desArr addObject: [JDChannelModel channelWithDict:dict]];
+        [desArr addObject: [JDChannelModel channelWithDict:obj]];
     }];
-   
     
-    return desArr;
-    
-    
+    //升序排列
+    desArr=[desArr sortedArrayUsingComparator:^NSComparisonResult(JDChannelModel* obj1,JDChannelModel* obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }].copy;
+    //Incompatible pointer types assigning to 'NSMutableArray *' from 'NSArray *'
+    return desArr;    
 }
 
 

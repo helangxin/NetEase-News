@@ -11,7 +11,11 @@
 
 @implementation JDNewsModel
 
-
+-(void)setDocid:(NSInteger)docid
+{
+    _docid=docid;
+    _deatilURLString=[NSString stringWithFormat:@"//c.3g.163.com/nc/article/%ld/full.html",(long)docid];
+}
 //字典转换成模型
 + (instancetype)newsWithDict:(NSDictionary *)dict
 {
@@ -28,10 +32,10 @@
  所以才创建block，创建成功回调和失败回调
  *
  */
-+(void)NewsSuccess:(void(^)(NSArray*))finish andFailed:(void(^)(NSError* ))failed
++(void)loadData:(NSString*)url NewsSuccess:(void(^)(NSArray*))finish andFailed:(void(^)(NSError* ))failed
 {
     //拼接字符串
-    [[JDNewsTool shareManager]GET:@"/nc/article/headline/T1348647853363/0-20.html" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject)
+    [[JDNewsTool shareManager]GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject)
      {
         //NSLog(@"%@--",responseObject);
         //获得字典的第一个Key

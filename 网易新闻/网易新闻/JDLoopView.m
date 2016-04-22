@@ -59,7 +59,7 @@
 -(instancetype)initWithFrame:(CGRect)frame
 
 {
-    NSLog(@"%s", __FUNCTION__);
+   // NSLog(@"%s", __FUNCTION__);
     if (self=[super initWithFrame:frame])
     {
         [self setup];
@@ -94,7 +94,7 @@
     CGFloat pageY=self.colletionView.frame.size.height;
     //self.PageControl.tintColor=[UIColor redColor];
     self.PageControl.frame=CGRectMake(pageX, pageY, pageW, pageH);
-    NSLog(@"self.PageControl.frame===%@",NSStringFromCGRect(self.PageControl.frame));
+    //NSLog(@"self.PageControl.frame===%@",NSStringFromCGRect(self.PageControl.frame));
     
     //设置titlelabe
     CGFloat titleX=marginX*0.5;
@@ -151,7 +151,7 @@
 #pragma mark---添加子控件
 -(void)setup
 {
-    NSLog(@"%s", __FUNCTION__);
+    //NSLog(@"%s", __FUNCTION__);
     UICollectionView *collectionView=[[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:[[JDLoopViewFLowLayout alloc]init]];
     //为什么要自定义FLowLayout？？
     collectionView.backgroundColor=[UIColor whiteColor];
@@ -210,7 +210,7 @@
         CGFloat offsetX=self.URLs.count-((page==0)?0:1) *scrollView.frame.size.width;
         self.colletionView.contentOffset=CGPointMake(offsetX, 0);
     }
-    NSLog(@"%zd",page);
+   // NSLog(@"%zd",page);
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

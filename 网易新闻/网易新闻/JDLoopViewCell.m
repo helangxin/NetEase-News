@@ -33,7 +33,7 @@
 {
     _URLs=URLs;
     [self.iconView sd_setImageWithURL:URLs];
-    NSLog(@"%s", __FUNCTION__);
+    //NSLog(@"%s", __FUNCTION__);
 }
 
 -(void)layoutSubviews

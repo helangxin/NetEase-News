@@ -15,7 +15,7 @@
 -(void)prepareLayout
 {
     [super prepareLayout];
-    NSLog(@"%@",NSStringFromCGSize(self.collectionView.bounds.size));
+   // NSLog(@"%@",NSStringFromCGSize(self.collectionView.bounds.size));
     
     //self.itemSize=self.collectionView.size;
     self.itemSize=self.collectionView.bounds.size;

@@ -33,9 +33,15 @@
 //大图
 @property (nonatomic, assign) BOOL imgType;
 
+//文档id
+@property (nonatomic, assign) NSInteger docid;
+
+//详情URL
+@property (nonatomic, copy) NSString *deatilURLString;
+
 
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
 //创建成功和失败的回调方法
-+(void)NewsSuccess:(void(^)(NSArray*))finish andFailed:(void(^)(NSError*))failed;
++(void)loadData:(NSString*)url NewsSuccess:(void(^)(NSArray*))finish andFailed:(void(^)(NSError* ))failed;
 @end

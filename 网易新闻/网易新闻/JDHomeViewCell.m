@@ -7,17 +7,48 @@
 //
 
 #import "JDHomeViewCell.h"
+#import "JDNewsViewController.h"
+
+@interface JDHomeViewCell ()
+
+//@property (nonatomic, strong) JDNewsViewController * newsVC;
+
+
+
+
+@end
 
 @implementation JDHomeViewCell
-
-- (void)awakeFromNib {
-    // Initialization code
+//
+//- (void)awakeFromNib
+//{
+//    NSLog(@"%s", __FUNCTION__);
+//    UIStoryboard *sb=[UIStoryboard storyboardWithName:@"news" bundle:nil];
+//    
+//    self.newsVC= sb.instantiateInitialViewController;
+//    
+//    [self addSubview:self.newsVC.view];
+//  
+//}
+//接收外界传入的控制器
+-(void)setNewsVC:(JDNewsViewController *)newsVC
+{
+    _newsVC=newsVC;
+    [self addSubview:newsVC.view];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+-(void)setURLstring:(NSString *)URLstring
+{
+    URLstring=URLstring.copy;
+    self.newsVC.URLString=URLstring;
 }
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.newsVC.view.frame=self.bounds;
+}
+
 
 @end

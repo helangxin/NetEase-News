@@ -10,4 +10,9 @@
 
 @interface JDNewsViewController : UITableViewController
 
+/**
+ *  新闻数据对应的URLString
+ */
+@property (nonatomic, copy) NSString *URLString;
+
 @end
